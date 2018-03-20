@@ -7,7 +7,7 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter
 class DiscordListener(val bot: ProjectLauncher) : ListenerAdapter() {
 
     // Esse vai ser o evento caso uma mensagem for recebia
-     fun onMessageRecived(event: MessageReceivedEvent) {
+    override fun onMessageReceived(event: MessageReceivedEvent) {
 
         // Se o comando executado esta na lista de comandos então...
         for (command in bot.commands) {
