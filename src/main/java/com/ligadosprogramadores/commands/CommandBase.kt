@@ -26,9 +26,11 @@ open abstract class CommandBase {
     // Finalmente vamos para parte que pega o comando quando executado.
     fun handle(ev: MessageReceivedEvent) {
         var prefix: String = "b!" // Esse vai ser o prefixo do nosso bot.
-        if (ev.message.contentDisplay.startsWith(prefix)) {
+        if (ev.message.contentDisplay.startsWith(prefix + getLabel())) {
             run(ev) // Se caso a mensagem começar com o prefixo, então ele vai executar o comando.
         }
     }
+
+
 
 }

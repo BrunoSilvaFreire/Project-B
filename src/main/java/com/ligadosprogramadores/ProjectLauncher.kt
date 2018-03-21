@@ -2,6 +2,7 @@ package com.ligadosprogramadores
 
 import com.ligadosprogramadores.commands.CommandBase
 import com.ligadosprogramadores.commands.PingCommand
+import com.ligadosprogramadores.commands.PollCommand
 import net.dv8tion.jda.core.AccountType
 import net.dv8tion.jda.core.JDABuilder
 
@@ -15,6 +16,7 @@ class ProjectLauncher {
     constructor() {
 
         commands.add(PingCommand())
+        commands.add(PollCommand())
 
         // Vamos falar para o JDA que a conta que estamos usando é de um bot.
         JDABuilder(AccountType.BOT)
